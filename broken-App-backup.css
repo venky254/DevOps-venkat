@@ -1,0 +1,1399 @@
+/* =========================================================
+   MENTOR PAGE
+========================================================= */
+
+.mentor-page {
+  position: relative;
+  padding: 120px 5%;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(56, 189, 248, 0.1),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 75%,
+      rgba(14, 165, 233, 0.08),
+      transparent 32%
+    ),
+    #07111f;
+
+  border-top: 1px solid #182c42;
+  border-bottom: 1px solid #182c42;
+}
+
+.mentor-page-container {
+  width: min(1400px, 100%);
+  margin: auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.mentor-heading {
+  max-width: 1000px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.mentor-heading > p:first-child {
+  margin: 0 0 15px;
+
+  color: var(--cyan);
+
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.mentor-heading h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.2;
+}
+
+.mentor-heading h2 span {
+  color: var(--cyan);
+}
+
+.mentor-heading-description {
+  max-width: 750px;
+
+  margin: 25px auto 0 !important;
+
+  color: #94a3b8 !important;
+
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   PHOTO + STORY
+========================= */
+
+.mentor-layout {
+  display: grid;
+
+  grid-template-columns: 400px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 85px;
+}
+
+
+/* PHOTO SIDE */
+
+.mentor-photo-side {
+  position: relative;
+
+  min-height: 540px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.mentor-photo-glow {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  background: rgba(56, 189, 248, 0.18);
+
+  border-radius: 50%;
+
+  filter: blur(85px);
+
+  z-index: 0;
+}
+
+.mentor-photo-frame {
+  position: relative;
+
+  width: 335px;
+  height: 420px;
+
+  padding: 5px;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      145deg,
+      #38bdf8,
+      #0ea5e9 50%,
+      #164e73
+    );
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.5),
+    0 0 45px rgba(56, 189, 248, 0.13);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.mentor-photo-frame:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.55),
+    0 0 55px rgba(56, 189, 248, 0.22);
+}
+
+.mentor-photo {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center top;
+
+  background: #0f1d30;
+
+  border-radius: 20px;
+}
+
+
+/* NAME CARD */
+
+.mentor-name-card {
+  position: relative;
+
+  width: 285px;
+
+  margin-top: -27px;
+  padding: 20px 25px;
+
+  z-index: 4;
+
+  text-align: center;
+
+  background: rgba(9, 23, 40, 0.98);
+
+  border: 1px solid #29435f;
+  border-radius: 13px;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.mentor-name-card h3 {
+  margin: 0 0 7px;
+
+  color: white;
+
+  font-size: 21px;
+}
+
+.mentor-name-card p {
+  margin: 0;
+
+  color: var(--cyan);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* STORY */
+
+.mentor-story {
+  min-width: 0;
+}
+
+.mentor-story-label {
+  margin: 0 0 15px !important;
+
+  color: var(--cyan) !important;
+
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+}
+
+.mentor-story h2 {
+  max-width: 800px;
+
+  margin: 0 0 32px;
+
+  color: white;
+
+  font-size: clamp(34px, 4vw, 50px);
+
+  line-height: 1.25;
+}
+
+.mentor-story h2 span {
+  color: var(--cyan);
+}
+
+.mentor-story > p {
+  max-width: 850px;
+
+  margin: 0 0 20px;
+
+  color: #aebed0;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+}
+
+.mentor-story strong {
+  color: white;
+
+  font-weight: 800;
+}
+
+
+/* =========================
+   LESSON HEADING
+========================= */
+
+.mentor-learning-heading {
+  margin: 100px 0 45px;
+
+  text-align: center;
+}
+
+.mentor-learning-heading p {
+  margin: 0 0 12px;
+
+  color: var(--cyan);
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.mentor-learning-heading h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(30px, 4vw, 45px);
+}
+
+
+/* =========================
+   LESSON CARDS
+========================= */
+
+.mentor-lessons {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.mentor-lesson {
+  position: relative;
+
+  min-height: 255px;
+
+  padding: 32px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(56, 189, 248, 0.025),
+      transparent
+    ),
+    #0d1c2e;
+
+  border: 1px solid #203750;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mentor-lesson:hover {
+  transform: translateY(-7px);
+
+  border-color: var(--cyan);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.28);
+}
+
+.mentor-lesson > span {
+  display: block;
+
+  color: var(--cyan);
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.mentor-lesson h3 {
+  margin: 30px 0 15px;
+
+  color: white;
+
+  font-size: 21px;
+}
+
+.mentor-lesson p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   JOURNEY QUOTE
+========================= */
+
+.mentor-journey {
+  position: relative;
+
+  max-width: 1120px;
+
+  margin: 100px auto 0;
+
+  padding: 60px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(56, 189, 248, 0.13),
+      transparent 38%
+    ),
+    #091827;
+
+  border: 1px solid #26435f;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.mentor-quote-mark {
+  color: var(--cyan);
+
+  font-family: Georgia, serif;
+
+  font-size: 90px;
+
+  line-height: 0.65;
+}
+
+.mentor-journey h3 {
+  margin: 25px 0 30px;
+
+  color: white;
+
+  font-size: clamp(25px, 3vw, 35px);
+
+  font-weight: 700;
+
+  line-height: 1.55;
+}
+
+.mentor-journey h3 span {
+  color: var(--cyan);
+}
+
+.mentor-journey > p {
+  margin: 0;
+
+  color: #aebed0;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================
+   GRATITUDE
+========================= */
+
+.mentor-gratitude {
+  max-width: 950px;
+
+  margin: 105px auto 0;
+
+  text-align: center;
+}
+
+.mentor-gratitude-line {
+  width: 70px;
+  height: 2px;
+
+  margin: 0 auto 30px;
+
+  background: var(--cyan);
+
+  box-shadow:
+    0 0 15px rgba(56, 189, 248, 0.6);
+}
+
+.mentor-gratitude-label {
+  margin: 0 0 15px;
+
+  color: var(--cyan);
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.mentor-gratitude h2 {
+  margin: 0 0 30px;
+
+  color: white;
+
+  font-size: clamp(36px, 4vw, 55px);
+}
+
+.mentor-gratitude h2 span {
+  color: var(--cyan);
+}
+
+.mentor-thanks-message {
+  margin: 0 auto 20px;
+
+  color: #aebed0;
+
+  font-size: 18px;
+
+  line-height: 1.9;
+}
+
+.mentor-final-message {
+  margin: 0 auto;
+
+  color: #d7e5f3;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  line-height: 1.8;
+}
+
+
+/* SIGNATURE */
+
+.mentor-signature {
+  margin-top: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 17px;
+}
+
+.mentor-signature > span {
+  width: 45px;
+  height: 2px;
+
+  background: var(--cyan);
+}
+
+.mentor-signature div {
+  text-align: left;
+}
+
+.mentor-signature strong {
+  display: block;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+.mentor-signature small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--cyan);
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .mentor-layout {
+    grid-template-columns: 340px 1fr;
+
+    gap: 50px;
+  }
+
+  .mentor-photo-frame {
+    width: 300px;
+    height: 380px;
+  }
+
+  .mentor-lessons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   MOBILE / TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .mentor-layout {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .mentor-photo-side {
+    min-height: auto;
+  }
+
+  .mentor-story {
+    text-align: left;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .mentor-page {
+    padding: 80px 6%;
+  }
+
+  .mentor-heading {
+    margin-bottom: 55px;
+  }
+
+  .mentor-heading h2 {
+    font-size: 34px;
+  }
+
+  .mentor-heading-description {
+    font-size: 16px !important;
+  }
+
+  .mentor-photo-frame {
+    width: 270px;
+    height: 340px;
+  }
+
+  .mentor-photo-glow {
+    width: 270px;
+    height: 270px;
+  }
+
+  .mentor-name-card {
+    width: 240px;
+  }
+
+  .mentor-story h2 {
+    font-size: 30px;
+  }
+
+  .mentor-story > p {
+    font-size: 16px;
+  }
+
+  .mentor-learning-heading {
+    margin-top: 75px;
+  }
+
+  .mentor-lessons {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-lesson {
+    min-height: auto;
+  }
+
+  .mentor-journey {
+    margin-top: 70px;
+
+    padding: 40px 27px;
+  }
+
+  .mentor-quote-mark {
+    font-size: 70px;
+  }
+
+  .mentor-journey h3 {
+    font-size: 23px;
+  }
+
+  .mentor-journey > p {
+    font-size: 16px;
+  }
+
+  .mentor-gratitude {
+    margin-top: 75px;
+  }
+
+  .mentor-gratitude h2 {
+    font-size: 34px;
+  }
+
+  .mentor-thanks-message,
+  .mentor-final-message {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+  .mentor-photo-frame {
+    width: 245px;
+    height: 310px;
+  }
+
+  .mentor-photo-glow {
+    width: 230px;
+    height: 230px;
+  }
+
+  .mentor-journey {
+    padding: 35px 22px;
+  }
+}
+/* =========================================================
+   MENTOR PAGE - FINAL
+========================================================= */
+
+.mentor-page {
+  position: relative;
+  padding: 120px 5%;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 25%,
+      rgba(56, 189, 248, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 75%,
+      rgba(14, 165, 233, 0.08),
+      transparent 30%
+    ),
+    #07111f;
+
+  border-top: 1px solid #182c42;
+  border-bottom: 1px solid #182c42;
+}
+
+.mentor-page-container {
+  width: min(1400px, 100%);
+  margin: auto;
+}
+
+
+/* ================= MENTOR HEADING ================= */
+
+.mentor-heading {
+  max-width: 1000px;
+  margin: 0 auto 85px;
+  text-align: center;
+}
+
+.mentor-heading > p:first-child {
+  margin: 0 0 15px;
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.mentor-heading h2 {
+  margin: 0;
+  color: white;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.2;
+}
+
+.mentor-heading h2 span {
+  color: var(--cyan);
+}
+
+.mentor-heading-description {
+  max-width: 760px;
+  margin: 25px auto 0 !important;
+  color: #94a3b8 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.8;
+}
+
+
+/* ================= PHOTO + STORY ================= */
+
+.mentor-layout {
+  display: grid;
+  grid-template-columns: 400px minmax(0, 1fr);
+  gap: 85px;
+  align-items: center;
+}
+
+
+/* ================= PHOTO SIDE ================= */
+
+.mentor-photo-side {
+  position: relative;
+  min-height: 520px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mentor-photo-glow {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  background: rgba(56, 189, 248, 0.18);
+
+  border-radius: 50%;
+  filter: blur(80px);
+
+  z-index: 0;
+}
+
+
+/* ================= PHOTO FRAME ================= */
+
+.mentor-photo-frame {
+  position: relative;
+
+  width: 335px;
+  height: 420px;
+
+  padding: 5px;
+
+  z-index: 2;
+
+  background: linear-gradient(
+    145deg,
+    #38bdf8,
+    #0ea5e9 50%,
+    #164e73
+  );
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.5),
+    0 0 45px rgba(56, 189, 248, 0.15);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.mentor-photo-frame:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.55),
+    0 0 60px rgba(56, 189, 248, 0.25);
+}
+
+
+/* ================= IMPORTANT CROP ================= */
+
+.mentor-photo-crop {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #0d1c2e;
+
+  border-radius: 20px;
+}
+
+
+/* ================= MENTOR PHOTO ================= */
+
+.mentor-photo {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  /*
+     Focus on the bottom portion because
+     the original image has black space above.
+  */
+  object-position: center bottom;
+
+  /*
+     Zoom image so black space goes
+     outside the visible crop.
+  */
+  transform: scale(1.55);
+
+  transform-origin: center bottom;
+}
+
+
+/* ================= NAME CARD ================= */
+
+.mentor-name-card {
+  position: relative;
+
+  width: 285px;
+
+  margin-top: -25px;
+  padding: 20px 25px;
+
+  z-index: 5;
+
+  text-align: center;
+
+  background: rgba(9, 23, 40, 0.98);
+
+  border: 1px solid #29435f;
+  border-radius: 13px;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.mentor-name-card h3 {
+  margin: 0 0 7px;
+  color: white;
+  font-size: 21px;
+}
+
+.mentor-name-card p {
+  margin: 0;
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* ================= STORY ================= */
+
+.mentor-story {
+  min-width: 0;
+}
+
+.mentor-story-label {
+  margin: 0 0 16px !important;
+
+  color: var(--cyan) !important;
+
+  font-size: 12px !important;
+  font-weight: 900 !important;
+
+  letter-spacing: 2.5px !important;
+}
+
+.mentor-story h2 {
+  max-width: 850px;
+
+  margin: 0 0 35px;
+
+  color: white;
+
+  font-size: clamp(35px, 4vw, 52px);
+
+  line-height: 1.25;
+}
+
+.mentor-story h2 span {
+  color: var(--cyan);
+}
+
+.mentor-story > p {
+  max-width: 900px;
+
+  margin: 0 0 21px;
+
+  color: #aebed0;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+}
+
+.mentor-story strong {
+  color: white;
+  font-weight: 800;
+}
+
+
+/* ================= LESSON HEADING ================= */
+
+.mentor-learning-heading {
+  margin: 110px 0 50px;
+  text-align: center;
+}
+
+.mentor-learning-heading p {
+  margin: 0 0 13px;
+
+  color: var(--cyan);
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.mentor-learning-heading h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(32px, 4vw, 47px);
+}
+
+
+/* ================= LESSON CARDS ================= */
+
+.mentor-lessons {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.mentor-lesson {
+  min-height: 270px;
+
+  padding: 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(56, 189, 248, 0.03),
+      transparent
+    ),
+    #0d1c2e;
+
+  border: 1px solid #203750;
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mentor-lesson:hover {
+  transform: translateY(-7px);
+
+  border-color: var(--cyan);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.mentor-lesson > span {
+  display: block;
+
+  color: var(--cyan);
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.mentor-lesson h3 {
+  margin: 30px 0 16px;
+
+  color: white;
+
+  font-size: 21px;
+}
+
+.mentor-lesson p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ================= JOURNEY ================= */
+
+.mentor-journey {
+  position: relative;
+
+  max-width: 1120px;
+
+  margin: 105px auto 0;
+  padding: 60px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(56, 189, 248, 0.13),
+      transparent 38%
+    ),
+    #091827;
+
+  border: 1px solid #26435f;
+  border-radius: 20px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.mentor-quote-mark {
+  color: var(--cyan);
+
+  font-family: Georgia, serif;
+
+  font-size: 90px;
+
+  line-height: 0.65;
+}
+
+.mentor-journey h3 {
+  margin: 25px 0 30px;
+
+  color: white;
+
+  font-size: clamp(25px, 3vw, 35px);
+
+  line-height: 1.55;
+}
+
+.mentor-journey h3 span {
+  color: var(--cyan);
+}
+
+.mentor-journey > p {
+  margin: 0;
+
+  color: #aebed0;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+}
+
+
+/* ================= GRATITUDE ================= */
+
+.mentor-gratitude {
+  max-width: 950px;
+
+  margin: 110px auto 0;
+
+  text-align: center;
+}
+
+.mentor-gratitude-line {
+  width: 70px;
+  height: 2px;
+
+  margin: 0 auto 30px;
+
+  background: var(--cyan);
+
+  box-shadow:
+    0 0 15px rgba(56, 189, 248, 0.6);
+}
+
+.mentor-gratitude-label {
+  margin: 0 0 15px;
+
+  color: var(--cyan);
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.mentor-gratitude h2 {
+  margin: 0 0 30px;
+
+  color: white;
+
+  font-size: clamp(37px, 4vw, 55px);
+}
+
+.mentor-gratitude h2 span {
+  color: var(--cyan);
+}
+
+.mentor-thanks-message {
+  max-width: 900px;
+
+  margin: 0 auto 20px;
+
+  color: #aebed0;
+
+  font-size: 18px;
+
+  line-height: 1.9;
+}
+
+.mentor-final-message {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  color: #d7e5f3;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  line-height: 1.8;
+}
+
+
+/* ================= SIGNATURE ================= */
+
+.mentor-signature {
+  margin-top: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 17px;
+}
+
+.mentor-signature > span {
+  width: 45px;
+  height: 2px;
+
+  background: var(--cyan);
+}
+
+.mentor-signature div {
+  text-align: left;
+}
+
+.mentor-signature strong {
+  display: block;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+.mentor-signature small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--cyan);
+
+  font-size: 13px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+  .mentor-layout {
+    grid-template-columns: 340px 1fr;
+    gap: 50px;
+  }
+
+  .mentor-photo-frame {
+    width: 300px;
+    height: 380px;
+  }
+
+  .mentor-lessons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ================= SMALL TABLET ================= */
+
+@media (max-width: 850px) {
+  .mentor-layout {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  .mentor-photo-side {
+    min-height: auto;
+  }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+  .mentor-page {
+    padding: 80px 6%;
+  }
+
+  .mentor-heading {
+    margin-bottom: 60px;
+  }
+
+  .mentor-heading h2 {
+    font-size: 34px;
+  }
+
+  .mentor-heading-description {
+    font-size: 16px !important;
+  }
+
+  .mentor-photo-frame {
+    width: 270px;
+    height: 340px;
+  }
+
+  .mentor-photo-glow {
+    width: 260px;
+    height: 260px;
+  }
+
+  .mentor-name-card {
+    width: 240px;
+  }
+
+  .mentor-story h2 {
+    font-size: 30px;
+  }
+
+  .mentor-story > p {
+    font-size: 16px;
+  }
+
+  .mentor-learning-heading {
+    margin-top: 80px;
+  }
+
+  .mentor-lessons {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-lesson {
+    min-height: auto;
+  }
+
+  .mentor-journey {
+    margin-top: 75px;
+    padding: 40px 27px;
+  }
+
+  .mentor-quote-mark {
+    font-size: 70px;
+  }
+
+  .mentor-journey h3 {
+    font-size: 23px;
+  }
+
+  .mentor-journey > p {
+    font-size: 16px;
+  }
+
+  .mentor-gratitude {
+    margin-top: 80px;
+  }
+
+  .mentor-gratitude h2 {
+    font-size: 34px;
+  }
+
+  .mentor-thanks-message,
+  .mentor-final-message {
+    font-size: 16px;
+  }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 450px) {
+  .mentor-photo-frame {
+    width: 245px;
+    height: 310px;
+  }
+
+  .mentor-photo-glow {
+    width: 230px;
+    height: 230px;
+  }
+
+  .mentor-journey {
+    padding: 35px 22px;
+  }
+}

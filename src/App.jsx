@@ -194,7 +194,8 @@ const liveApps = [
 function App() {
   return (
     <>
-      {/* NAVBAR */}
+      {/* ================= NAVBAR ================= */}
+
       <header className="navbar">
         <div className="nav-container">
           <a href="#home" className="logo">
@@ -208,17 +209,17 @@ function App() {
             <a href="#capabilities">Capabilities</a>
             <a href="#projects">Projects</a>
             <a href="#live-apps">Live Apps</a>
+            <a href="#mentor">Mentor</a>
             <a href="#contact">Contact</a>
           </nav>
         </div>
       </header>
 
       <main>
-        {/* HERO */}
+        {/* ================= HERO ================= */}
+
         <section className="hero" id="home">
           <div className="hero-content">
-
-            {/* LEFT SIDE */}
             <div className="hero-left">
               <p className="hero-label">
                 DEVOPS • CLOUD • AUTOMATION • SRE
@@ -274,7 +275,6 @@ function App() {
               </div>
             </div>
 
-            {/* RIGHT SIDE - PHOTO ONLY */}
             <div className="hero-right">
               <div className="profile-glow"></div>
 
@@ -294,7 +294,8 @@ function App() {
           </div>
         </section>
 
-        {/* ABOUT */}
+        {/* ================= ABOUT ================= */}
+
         <section className="section" id="about">
           <div className="section-heading">
             <p>ABOUT ME</p>
@@ -379,7 +380,8 @@ function App() {
           </div>
         </section>
 
-        {/* EXPERIENCE */}
+        {/* ================= EXPERIENCE ================= */}
+
         <section className="section section-alt">
           <div className="section-heading">
             <p>HANDS-ON EXPERIENCE</p>
@@ -390,23 +392,19 @@ function App() {
             {experience.map((item) => (
               <article className="info-card" key={item.title}>
                 <div className="card-icon">{item.icon}</div>
-
                 <h3>{item.title}</h3>
-
                 <p>{item.text}</p>
               </article>
             ))}
           </div>
         </section>
 
-        {/* DEPLOYMENT APPROACH */}
+        {/* ================= DEPLOYMENT ================= */}
+
         <section className="section">
           <div className="section-heading">
             <p>DEPLOYMENT APPROACH</p>
-
-            <h2>
-              Different Applications Need Different Architectures
-            </h2>
+            <h2>Different Applications Need Different Architectures</h2>
           </div>
 
           <p className="section-intro">
@@ -417,16 +415,9 @@ function App() {
 
           <div className="deployment-grid">
             {deploymentModels.map((item) => (
-              <article
-                className="deployment-card"
-                key={item.title}
-              >
-                <span className="deployment-number">
-                  {item.number}
-                </span>
-
+              <article className="deployment-card" key={item.title}>
+                <span className="deployment-number">{item.number}</span>
                 <h3>{item.title}</h3>
-
                 <p>{item.text}</p>
               </article>
             ))}
@@ -473,11 +464,9 @@ function App() {
           </div>
         </section>
 
-        {/* STACK */}
-        <section
-          className="section section-alt"
-          id="stack"
-        >
+        {/* ================= STACK ================= */}
+
+        <section className="section section-alt" id="stack">
           <div className="section-heading">
             <p>TECHNOLOGY STACK</p>
             <h2>Tools & Technologies</h2>
@@ -485,17 +474,12 @@ function App() {
 
           <div className="stack-grid">
             {stack.map((group) => (
-              <article
-                className="stack-card"
-                key={group.title}
-              >
+              <article className="stack-card" key={group.title}>
                 <h3>{group.title}</h3>
 
                 <div className="stack-tags">
                   {group.items.map((item) => (
-                    <span key={item}>
-                      {item}
-                    </span>
+                    <span key={item}>{item}</span>
                   ))}
                 </div>
               </article>
@@ -503,11 +487,9 @@ function App() {
           </div>
         </section>
 
-        {/* CAPABILITIES */}
-        <section
-          className="section"
-          id="capabilities"
-        >
+        {/* ================= CAPABILITIES ================= */}
+
+        <section className="section" id="capabilities">
           <div className="section-heading">
             <p>CAPABILITIES</p>
             <h2>What I Can Do</h2>
@@ -515,25 +497,17 @@ function App() {
 
           <div className="capability-grid">
             {capabilities.map((item, index) => (
-              <div
-                className="capability-card"
-                key={item}
-              >
-                <span>
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
+              <div className="capability-card" key={item}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{item}</h3>
               </div>
             ))}
           </div>
         </section>
 
-        {/* PROJECTS */}
-        <section
-          className="section section-alt"
-          id="projects"
-        >
+        {/* ================= PROJECTS ================= */}
+
+        <section className="section section-alt" id="projects">
           <div className="section-heading">
             <p>PROJECTS</p>
             <h2>Hands-On DevOps Work</h2>
@@ -541,24 +515,18 @@ function App() {
 
           <div className="project-grid">
             {projects.map((project) => (
-              <article
-                className="project-card"
-                key={project.title}
-              >
+              <article className="project-card" key={project.title}>
                 <div className="project-top">
                   <span>PROJECT</span>
                   <span>↗</span>
                 </div>
 
                 <h3>{project.title}</h3>
-
                 <p>{project.text}</p>
 
                 <div className="project-tags">
                   {project.tags.map((tag) => (
-                    <span key={tag}>
-                      {tag}
-                    </span>
+                    <span key={tag}>{tag}</span>
                   ))}
                 </div>
               </article>
@@ -566,17 +534,12 @@ function App() {
           </div>
         </section>
 
-        {/* LIVE APPLICATIONS */}
-        <section
-          className="section"
-          id="live-apps"
-        >
+        {/* ================= LIVE APPLICATIONS ================= */}
+
+        <section className="section" id="live-apps">
           <div className="section-heading">
             <p>LIVE APPLICATIONS</p>
-
-            <h2>
-              Applications Running in the Cloud
-            </h2>
+            <h2>Applications Running in the Cloud</h2>
           </div>
 
           <p className="section-intro">
@@ -586,31 +549,22 @@ function App() {
 
           <div className="live-grid">
             {liveApps.map((app) => (
-              <article
-                className="live-card"
-                key={app.title}
-              >
+              <article className="live-card" key={app.title}>
                 <div className="live-status">
                   <span></span>
                   LIVE
                 </div>
 
                 <h3>{app.title}</h3>
-
                 <p>{app.text}</p>
 
                 <div className="project-tags">
                   {app.tags.map((tag) => (
-                    <span key={tag}>
-                      {tag}
-                    </span>
+                    <span key={tag}>{tag}</span>
                   ))}
                 </div>
 
-                <ExternalLink
-                  href={app.url}
-                  className="live-link"
-                >
+                <ExternalLink href={app.url} className="live-link">
                   Open Live Application ↗
                 </ExternalLink>
               </article>
@@ -618,7 +572,8 @@ function App() {
           </div>
         </section>
 
-        {/* CURRENT FOCUS */}
+        {/* ================= CURRENT FOCUS ================= */}
+
         <section className="focus-section">
           <div className="focus-container">
             <p>CURRENT FOCUS</p>
@@ -640,7 +595,116 @@ function App() {
           </div>
         </section>
 
-        {/* CONTACT */}
+        {/* ================= MENTOR ================= */}
+
+        <section className="mentor-page" id="mentor">
+          <div className="mentor-page-container">
+            <div className="mentor-heading">
+              <p>MY MENTOR</p>
+              <h2>
+                A Special Tribute to <span>Murali Mohan Sir</span>
+              </h2>
+              <p className="mentor-heading-description">
+                The mentor who helped me find direction, develop a problem-solving
+                mindset, and begin my DevOps journey.
+              </p>
+            </div>
+
+            <div className="mentor-center-photo">
+              <div className="mentor-photo-glow"></div>
+              <div className="mentor-photo-frame">
+                <div className="mentor-photo-crop">
+                  <img
+                    src="/images/murali-profile.jpeg"
+                    alt="Murali Mohan Sir - My DevOps Mentor"
+                    className="mentor-photo"
+                  />
+                </div>
+              </div>
+              <div className="mentor-name-card">
+                <h3>Murali Mohan Sir</h3>
+                <p>My DevOps Mentor</p>
+              </div>
+            </div>
+
+            <div className="mentor-learning-heading">
+              <p>WHAT I LEARNED FROM MY MENTOR</p>
+              <h2>Lessons That Stay With Me</h2>
+            </div>
+
+            <div className="mentor-lessons mentor-lessons-six">
+              <article className="mentor-lesson">
+                <span>01</span>
+                <h3>Right Direction</h3>
+                <p>He guided me in the right direction when I was unsure about which path to take in my career.</p>
+              </article>
+              <article className="mentor-lesson">
+                <span>02</span>
+                <h3>Problem-Solving Mindset</h3>
+                <p>He taught me to understand the problem, analyze what is happening, and work step by step toward the right solution.</p>
+              </article>
+              <article className="mentor-lesson">
+                <span>03</span>
+                <h3>Practical Learning</h3>
+                <p>His practical explanations helped me understand concepts clearly and encouraged me to explore technologies by myself.</p>
+              </article>
+              <article className="mentor-lesson">
+                <span>04</span>
+                <h3>Find the Root Cause</h3>
+                <p>Instead of only fixing the visible error, he taught me to understand why the problem happened and find its root cause.</p>
+              </article>
+              <article className="mentor-lesson">
+                <span>05</span>
+                <h3>DevOps Foundation</h3>
+                <p>His guidance helped me build a strong foundation in DevOps, cloud, deployment, automation and troubleshooting.</p>
+              </article>
+              <article className="mentor-lesson">
+                <span>06</span>
+                <h3>Support & Motivation</h3>
+                <p>Whenever I faced difficulties, his motivation encouraged me to continue learning, practicing and moving forward.</p>
+              </article>
+            </div>
+
+            <div className="mentor-journey">
+              <div className="mentor-quote-mark">“</div>
+              <h3>
+                From not knowing which direction to take after graduation to building,
+                deploying, automating, monitoring and troubleshooting applications today —
+                <span>{" "}your guidance has been an important part of my journey.</span>
+              </h3>
+              <p>
+                Your practical explanations, motivation, patience and way of teaching
+                helped me understand that DevOps is not simply about learning tools.
+                It is about understanding problems, thinking logically, choosing the
+                right approach, learning from failures and continuously improving.
+              </p>
+            </div>
+
+            <div className="mentor-gratitude">
+              <div className="mentor-gratitude-line"></div>
+              <p className="mentor-gratitude-label">FOREVER GRATEFUL</p>
+              <h2>Thank You, <span>Murali Mohan Sir.</span></h2>
+              <p className="mentor-thanks-message">
+                I will always be grateful for your guidance, support, knowledge,
+                encouragement and motivation throughout my journey.
+              </p>
+              <p className="mentor-final-message">
+                Thank you for helping me find my direction and for being an important
+                part of my DevOps journey.
+              </p>
+              <div className="mentor-signature">
+                <span></span>
+                <div>
+                  <strong>With respect and gratitude,</strong>
+                  <small>— Venkataramana</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= CONTACT ================= */}
+
         <section
           className="section contact-section"
           id="contact"
@@ -680,7 +744,8 @@ function App() {
         </section>
       </main>
 
-      {/* FOOTER */}
+      {/* ================= FOOTER ================= */}
+
       <footer className="footer">
         <div>
           <strong>
