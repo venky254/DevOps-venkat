@@ -305,7 +305,7 @@ function App() {
           <div className="about-grid">
             <div className="about-text">
               <p>
-                I am a DevOps & Cloud Engineer with one year of hands-on
+                I am a DevOps & Cloud Engineer with 1+ year of hands-on
                 experience working with application deployment, cloud
                 infrastructure, containerization, orchestration, CI/CD and
                 monitoring.
